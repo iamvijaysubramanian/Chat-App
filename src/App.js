@@ -15,12 +15,7 @@ import ForgotPassword from './Components/ForgotPassword';
 import ResetPassword from './Components/ResetPassword';
 import Header from './Components/Header';
 
-const socket = io.connect('https://chat-app-zq02.onrender.com/',{
-  withCredentials: true,
-  extraHeaders: {
-    "my-custom-header": "abcd"
-  }
-});
+const socket = io.connect('https://chat-app-zq02.onrender.com/');
 
 function App() {
   const [user, setUser, loading] = useFindUser();
