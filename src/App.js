@@ -1,5 +1,4 @@
 import './App.css'
-import { useState } from "react";
 import io from 'socket.io-client';
 import { Routes, Route } from 'react-router-dom';
 import UserContext from "./Context/UserContext";
@@ -8,6 +7,7 @@ import useFindUser from "./Hooks/useFindUser";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
 import JoinChat from "./Components/JoinChat";
+
 
 import PublicRoutes from "./Routes/PublicRoutes";
 import PrivateRoutes from "./Routes/PrivateRoutes";
@@ -34,6 +34,7 @@ function App() {
             </Route>
 
             <Route element={<PrivateRoutes />}>
+            
               {/* <Route path='/chat' element={<Chat />}/> */}
             </Route>
           </Routes>
